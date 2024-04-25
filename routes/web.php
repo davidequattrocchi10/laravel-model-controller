@@ -18,5 +18,8 @@ Route::get('/', [PageController::class, 'index'])->name('home');;
 
 Route::get('/vote', [PageController::class, 'vote'])->name('vote');
 
+Route::get('/nationality', [PageController::class, 'nationality'])->name('nationality');
 
-Route::get('/title', [PageController::class, 'title'])->name('title');
+Route::get('/date', [PageController::class, 'date'])->name('date');
+
+Route::get('/findId', [PageController::class, 'findId'])->name('findId');

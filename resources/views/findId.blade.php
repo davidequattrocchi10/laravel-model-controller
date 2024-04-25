@@ -1,13 +1,12 @@
 @extends('layouts.app')
 
-@section('pageTitle', 'Vote')
+@section('pageTitle', 'Find id 3')
 
 @section('content')
 
 <div class="container">
-    <h1 class="py-2">Movies with vote greater then 8.5</h1>
+    <h1 class="py-2">Movie with id 3</h1>
     <div class="row row-cols-md-1 row-cols-lg-2 row-cols-xl-3 g-1">
-        @foreach ($movies as $movie)
         <div class="col">
             <div class="card text-bg-primary mb-3" style="width: 25rem; height: 20rem;">
                 <div class="card-header" style="height: 30%;">
@@ -21,7 +20,6 @@
                 </div>
             </div>
         </div>
-        @endforeach
     </div>
 </div>
 

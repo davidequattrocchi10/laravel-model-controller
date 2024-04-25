@@ -14,22 +14,34 @@ class PageController extends Controller
 
         $movies = Movie::all();
 
-        //dd($movies);
-
         return view('home', compact('movies'));
     }
 
     public function vote()
     {
-        $movies = Movie::all();
+        $movies = Movie::where('vote', '>', 8.5)->get();
 
         return view('vote', compact('movies'));
     }
 
-    public function title()
+    public function nationality()
     {
-        $movies = Movie::all();
+        $movies = Movie::where('nationality', 'american/british')->get();
 
-        return view('title', compact('movies'));
+        return view('nationality', compact('movies'));
+    }
+
+    public function date()
+    {
+        $movies = Movie::orderBy('date', 'desc')->get();
+
+        return view('date', compact('movies'));
+    }
+
+    public function findId()
+    {
+        $movie = Movie::find(3);
+
+        return view('findId', compact('movie'));
     }
 }
